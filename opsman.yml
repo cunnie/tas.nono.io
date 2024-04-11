@@ -1,0 +1,41 @@
+---
+opsman-configuration:
+  vsphere:
+    vcenter:
+      datacenter: dc
+      datastore: NAS-0
+      url: vcenter-80.nono.io
+      username: a@vsphere.local
+      password: ((vcenter-password))
+      resource_pool: /dc/host/cl/Resources/TAS
+      # resource_pool can use a cluster - /example-dc/host/example-cluster
+
+      # Optional
+      # host: host      # DEPRECATED - Platform Automation cannot guarantee
+                        # the location of the VM, given the nature of vSphere
+      # insecure: 0     # default - 0 (secure) | 1 (insecure)
+
+    disk_type: thin     # thin|thick
+    dns: 8.8.8.8
+    gateway: 10.9.251.1
+    hostname: om.tas.nono.io
+    netmask: 255.255.255.0
+    network: TAS
+    ntp: time.google.com
+    private_ip: 10.9.251.10
+    ssh_public_key: ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIWiAzxc4uovfaphO0QVC2w00YmzrogUpjAzvuqaQ9tD cunnie@nono.io
+
+    # Optional
+    # cpu: 1                         # default - 1
+    # memory: 8                      # default - 8 (GB)
+    # ssh_password: ((ssh-password)) # REQUIRED if ssh_public_key not defined
+                                     # (Ops Manager < 2.6 ONLY)
+    # vm_name: ops-manager-vm        # default - ops-manager-vm
+    # disk_size: 200                 # default - 160 (GB), only larger values allowed
+
+  # Optional Ops Manager UI Settings for upgrade-opsman
+  # ssl-certificate: ...
+  # pivotal-network-settings: ...
+  # banner-settings: ...
+  # syslog-settings: ...
+  # rbac-settings: ...
