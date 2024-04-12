@@ -4,6 +4,7 @@ opsman-configuration:
     vcenter:
       datacenter: dc
       datastore: NAS-0
+      folder: /dc/vm/pcf_vms # RECOMMENDED, but not required
       url: vcenter-80.nono.io
       username: a@vsphere.local
       password: ((vcenter-password))
@@ -30,7 +31,7 @@ opsman-configuration:
     # memory: 8                      # default - 8 (GB)
     # ssh_password: ((ssh-password)) # REQUIRED if ssh_public_key not defined
                                      # (Ops Manager < 2.6 ONLY)
-    # vm_name: ops-manager-vm        # default - ops-manager-vm
+    vm_name: om.tas.nono.io
     # disk_size: 200                 # default - 160 (GB), only larger values allowed
 
   # Optional Ops Manager UI Settings for upgrade-opsman
