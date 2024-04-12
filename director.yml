@@ -20,7 +20,14 @@ iaas-configurations:
   ephemeral_datastore_clusters_string: ""
   ephemeral_datastores_string: NAS-0
   name: bosh.tas.nono.io
-  nsx_networking_enabled: false
+  nsx_address: nsx.nono.io
+  nsx_mode: nsx-t
+  nsx_networking_enabled: true
+  nsx_password: ((nsx-password))
+  nsx_t_auth_type: local_user
+  nsx_t_use_policy_api: true
+  nsx_t_use_policy_api_migration_mode: false
+  nsx_username: a
   persistent_datastore_clusters_string: ""
   persistent_datastores_string: NAS-0
   ssl_verification_enabled: false
@@ -48,7 +55,7 @@ networks-configuration:
 properties-configuration:
   director_configuration:
     additional_ssh_users: []
-    automatic_certificate_rotation_enabled: true
+    automatic_certificate_rotation_enabled: false
     blobstore_type: local
     bosh_director_recreate_on_next_deploy: false
     bosh_recreate_on_next_deploy: false
