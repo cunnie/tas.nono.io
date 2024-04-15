@@ -1,5 +1,5 @@
 ---
 pivnet-api-token: ((pivnet_token))
-pivnet-file-glob: "ops-manager-vsphere*.ova"
+pivnet-file-glob: "ops-manager-vsphere*+LTS-T.ova"
 pivnet-product-slug: ops-manager
-product-version-regex: ^3\.0\.\d+\+LTS-T$
+product-version-regex: ^3\.0\.\d+$
