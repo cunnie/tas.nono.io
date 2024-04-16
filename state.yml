@@ -1,0 +1,2 @@
+iaas: vsphere
+vm_id: /dc/vm/pcf_vms/om.tas.nono.io
