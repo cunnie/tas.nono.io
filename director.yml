@@ -4,10 +4,10 @@ az-configuration:
   clusters:
   - cluster: cl
     drs_rule: MUST
-    guid: afa95ab9163ab7d95b4b
+    guid: a509cddfd7c73b097945
     host_group: null
     resource_pool: TAS
-  guid: f367d56cb041e3190e84
+  guid: 6fac3630c2c0e14a61f6
 iaas-configurations:
 - additional_cloud_properties: {}
   bosh_disk_path: pcf_disk
